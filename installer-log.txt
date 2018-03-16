@@ -1,0 +1,209 @@
+********************************************************************************
+* DUPLICATOR-LITE: INSTALL-LOG
+* VERSION: 1.2.34
+* STEP-1 START @ 04:29:48
+* NOTICE: Do NOT post this data to public sites or forums
+********************************************************************************
+PHP VERSION:	7.1.8 | SAPI: apache2handler
+PHP TIME LIMIT:	[0] time limit restriction disabled
+PHP MEMORY:	2048M | SUHOSIN: disabled
+SERVER:		Apache/2.2.32 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.1.8 mod_ssl/2.2.32 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0
+DOC ROOT:	/Users/Sharon/Sites/vidicrew
+DOC ROOT 755:	true
+LOG FILE 644:	true
+REQUEST URL:	http://localhost/vidicrew/installer.php
+SAFE MODE :	0
+--------------------------------------
+ARCHIVE EXTRACTION
+--------------------------------------
+NAME:	acdb01f3a2c2a2c820180316_vidicrew_7761a543b6a6c4c54143180316153112_archive.zip
+SIZE:	83.14MB
+ZIP:	Enabled (ZipArchive Support)
+
+>>> START EXTRACTION:
+ZipArchive Object
+(
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 7325
+    [filename] => /Users/Sharon/Sites/vidicrew/acdb01f3a2c2a2c820180316_vidicrew_7761a543b6a6c4c54143180316153112_archive.zip
+    [comment] => 
+)
+File timestamp is 'Current' mode: 2018-03-16 16:29:53
+<<< EXTRACTION COMPLETE: true
+
+WEB SERVER CONFIGURATION FILE RESET:
+- Backup of .htaccess/web.config made to *.180316162953.orig
+- Reset of .htaccess/web.config files
+
+STEP-1 COMPLETE @ 04:29:53 - RUNTIME: 5.1643 sec.
+
+
+********************************************************************************
+* DUPLICATOR-LITE: INSTALL-LOG
+* STEP-2 START @ 04:30:49
+* NOTICE: Do NOT post to public sites or forums
+********************************************************************************
+--------------------------------------
+DATABASE ENVIRONMENT
+--------------------------------------
+MYSQL VERSION:	This Server: 5.6.35 -- Build Server: 5.5.59
+FILE SIZE:	database.sql (1000.54KB) - installer-data.sql (1000.54KB)
+TIMEOUT:	5000
+MAXPACK:	4194304
+SQLMODE:	NO_ENGINE_SUBSTITUTION
+NEW SQL FILE:	[/Users/Sharon/Sites/vidicrew/installer-data.sql]
+COLLATE RESET:	On
+
+--------------------------------------
+DATABASE RESULTS
+--------------------------------------
+ERRORS FOUND:	0
+TABLES DROPPED:	28
+QUERIES RAN:	346
+
+wp_commentmeta: (0)
+wp_comments: (1)
+wp_duplicator_packages: (1)
+wp_groups_capability: (72)
+wp_groups_group: (2)
+wp_groups_group_capability: (0)
+wp_groups_user_capability: (0)
+wp_groups_user_group: (1)
+wp_links: (0)
+wp_options: (582)
+wp_postmeta: (343)
+wp_posts: (155)
+wp_social_users: (0)
+wp_term_relationships: (12)
+wp_term_taxonomy: (18)
+wp_termmeta: (0)
+wp_terms: (18)
+wp_usermeta: (27)
+wp_users: (1)
+wp_wc_download_log: (0)
+wp_wc_webhooks: (0)
+wp_woocommerce_api_keys: (0)
+wp_woocommerce_attribute_taxonomies: (0)
+wp_woocommerce_downloadable_product_permissions: (0)
+wp_woocommerce_log: (0)
+wp_woocommerce_order_itemmeta: (0)
+wp_woocommerce_order_items: (0)
+wp_woocommerce_payment_tokenmeta: (0)
+wp_woocommerce_payment_tokens: (0)
+wp_woocommerce_sessions: (2)
+wp_woocommerce_shipping_zone_locations: (0)
+wp_woocommerce_shipping_zone_methods: (0)
+wp_woocommerce_shipping_zones: (0)
+wp_woocommerce_tax_rate_locations: (0)
+wp_woocommerce_tax_rates: (0)
+wp_wplc_chat_msgs: (36)
+wp_wplc_chat_sessions: (0)
+wp_wplc_offline_messages: (0)
+wp_wplc_webhooks: (0)
+
+Removed '161' cache/transient rows
+
+CREATE/INSTALL RUNTIME: 0.8566 sec.
+STEP-2 COMPLETE @ 04:30:50 - RUNTIME: 1.1354 sec.
+
+
+********************************************************************************
+* DUPLICATOR-LITE: INSTALL-LOG
+* STEP-3 START @ 04:31:12
+* NOTICE: Do NOT post to public sites or forums
+********************************************************************************
+CHARSET SERVER:	utf8
+CHARSET CLIENT:	utf8
+--------------------------------------
+SERIALIZER ENGINE
+[*] scan every column
+[~] scan only text columns
+[^] no searchable columns
+--------------------------------------
+wp_commentmeta^ (0)
+wp_comments~ (1)
+wp_duplicator_packages^ (0)
+wp_groups_capability~ (72)
+wp_groups_group~ (2)
+wp_groups_group_capability^ (0)
+wp_groups_user_capability^ (0)
+wp_groups_user_group~ (1)
+wp_links^ (0)
+wp_options~ (419)
+wp_postmeta~ (343)
+wp_posts~ (155)
+wp_social_users^ (0)
+wp_term_relationships~ (12)
+wp_term_taxonomy~ (18)
+wp_termmeta^ (0)
+wp_terms~ (18)
+wp_usermeta~ (27)
+wp_users~ (1)
+wp_wc_download_log^ (0)
+wp_wc_webhooks^ (0)
+wp_woocommerce_api_keys^ (0)
+wp_woocommerce_attribute_taxonomies^ (0)
+wp_woocommerce_downloadable_product_permissions^ (0)
+wp_woocommerce_log^ (0)
+wp_woocommerce_order_itemmeta^ (0)
+wp_woocommerce_order_items^ (0)
+wp_woocommerce_payment_tokenmeta^ (0)
+wp_woocommerce_payment_tokens^ (0)
+wp_woocommerce_sessions~ (2)
+wp_woocommerce_shipping_zone_locations^ (0)
+wp_woocommerce_shipping_zone_methods^ (0)
+wp_woocommerce_shipping_zones^ (0)
+wp_woocommerce_tax_rate_locations^ (0)
+wp_woocommerce_tax_rates^ (0)
+wp_wplc_chat_msgs~ (36)
+wp_wplc_chat_sessions^ (0)
+wp_wplc_offline_messages^ (0)
+wp_wplc_webhooks^ (0)
+--------------------------------------
+Search1:	'/var/www/html' 
+Change1:	'/Users/Sharon/Sites/vidicrew' 
+Search2:	'\/var\/www\/html' 
+Change2:	'\/Users\/Sharon\/Sites\/vidicrew' 
+Search3:	'%2Fvar%2Fwww%2Fhtml%2F' 
+Change3:	'%2FUsers%2FSharon%2FSites%2Fvidicrew%2F' 
+Search4:	'\var\www\html' 
+Change4:	'/Users/Sharon/Sites/vidicrew' 
+Search5:	'//35.204.186.33' 
+Change5:	'//localhost:8888/vidicrew' 
+Search6:	'\/\/35.204.186.33' 
+Change6:	'\/\/localhost:8888\/vidicrew' 
+Search7:	'%2F%2F35.204.186.33' 
+Change7:	'%2F%2Flocalhost%3A8888%2Fvidicrew' 
+SCANNED:	Tables:39 	|	 Rows:1107 	|	 Cells:7812 
+UPDATED:	Tables:1 	|	 Rows:166 	|	 Cells:177 
+ERRORS:		0 
+RUNTIME:	0.295200 sec
+
+====================================
+CONFIGURATION FILE UPDATES:
+====================================
+
+UPDATED WP-CONFIG: /wp-config.php' (if present)
+
+WEB SERVER CONFIGURATION FILE BASIC SETUP:
+- Preparing .htaccess file with basic setup.
+Basic .htaccess file edit complete.  If using IIS web.config this process will need to be done manually.
+
+====================================
+GENERAL UPDATES & CLEANUP:
+====================================
+
+- Created directory wp-snapshots
+- Created file wp-snapshots/index.php
+
+====================================
+NOTICES
+====================================
+
+No Notices Found
+
+
+STEP 3 COMPLETE @ 04:31:12 - RUNTIME: 0.3107 sec.
+
+
