@@ -1,0 +1,37 @@
+/******************************************************************
+Theme Name: vidiCREW Theme
+Theme URI: http://www.jointswp.com
+Description: 
+Author: Sharon Eden
+Author URI: http://www.vidicrew.com
+Version: 5.0
+License: GNU General Public License & MIT
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: Sass
+******************************************************************/
+
+@font-face { 
+	font-family: 'Montserrat';
+	src: url('https://fonts.googleapis.com/css?family=Montserrat:300,400');
+}
+	
+	body {	
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.top-bar, .top-bar ul {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0397d+0,f0394d+100 */
+    background: #f0397d; /* Old browsers */
+    background: -moz-linear-gradient(top, #f0397d 0%, #f0394d 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #f0397d 0%,#f0394d 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #f0397d 0%,#f0394d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0397d', endColorstr='#f0394d',GradientType=0 ); /* IE6-9 */
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+}
+
+

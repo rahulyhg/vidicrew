@@ -1,0 +1,8 @@
+2018-03-19T23:20:59+00:00 CRITICAL Uncaught Error: Cannot use object of type Groups_Group as array in /Users/Sharon/Sites/vidicrew/wp-content/themes/twentyseventeen/page.php:35
+Stack trace:
+#0 /Users/Sharon/Sites/vidicrew/wp-includes/template-loader.php(74): include()
+#1 /Users/Sharon/Sites/vidicrew/wp-blog-header.php(19): require_once('/Users/Sharon/S...')
+#2 /Users/Sharon/Sites/vidicrew/index.php(17): require('/Users/Sharon/S...')
+#3 {main}
+  thrown
+

@@ -1,0 +1,4 @@
+[20-Apr-2018 15:16:41 UTC] PHP Strict Standards:  Redefining already defined constructor for class WordReplacer in /var/sites/v/vidicrew.chaotic-eden.co.uk/public_html/wp-content/plugins/word-replacer/word-replacer.php on line 42
+[20-Apr-2018 15:16:42 UTC] PHP Notice:  Constant WP_MEMORY_LIMIT already defined in /var/sites/v/vidicrew.chaotic-eden.co.uk/public_html/wp-config.php on line 98
+[20-Apr-2018 15:16:42 UTC] PHP Notice:  Constant WP_MAX_MEMORY_LIMIT already defined in /var/sites/v/vidicrew.chaotic-eden.co.uk/public_html/wp-config.php on line 100
+[20-Apr-2018 15:16:42 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/sites/v/vidicrew.chaotic-eden.co.uk/public_html/wp-content/plugins/word-replacer/word-replacer.php:42) in /var/sites/v/vidicrew.chaotic-eden.co.uk/public_html/wp-includes/pluggable.php on line 1216
