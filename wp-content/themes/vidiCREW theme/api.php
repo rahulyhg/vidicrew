@@ -51,17 +51,81 @@ function login() {
                 $result = wp_check_password($password, $userdata->user_pass,
                         $userdata->ID);
                 if ($result) {
-                    $data = array(
-                        'id' => $userdata->ID,
-                        'email' => $userdata->user_email,
-                        'name' => $userdata->display_name,
-                        'features' => $featureArr
-                    );
+
                     $post_id = "user_" . $userdata->ID;
 
-                    $value = get_field('my_field', $post_id);
+                    $value = get_field('crew_code', $post_id);
                     if ($crewCode == $value) {
-                        getJson(array('status' => '1', 'data' => $data, 'message' => 'User logged in successfully.'));
+                        $userId = $userdata->ID;
+                        function my_posts_where($where) {
+
+                            $where = str_replace("meta_key = 'user_task_list_$",
+                                    "meta_key LIKE 'user_task_list_%", $where);
+
+                            return $where;
+                        }
+
+                        add_filter('posts_where', 'my_posts_where');
+                        $args = array(
+                            'post_type' => 'shotlist',
+                            'post_status' => 'publish',
+                            'posts_per_page' => -1,
+                            'order' => 'ASC',
+                            'meta_query' => array(
+                                'relation' => 'AND',
+                                array(
+                                    'key' => 'crew_code',
+                                    'value' => $crewCode
+                                ),
+                                array(
+                                    'key' => 'user_task_list_$_user',
+                                    'compare' => '=',
+                                    'value' => $userdata->ID,
+                                )
+                            )
+                        );
+                     
+                        $my_query = new WP_Query($args);
+                        if ($my_query->have_posts()) { 
+                            while ($my_query->have_posts()) : $my_query->the_post();
+                                global $post;
+                                $taskList = array();
+                                if (have_rows('user_task_list')) {
+                                    while (have_rows('user_task_list')) : the_row();
+                                        $taskUser = get_sub_field('user');
+                                        if (isset($taskUser['ID']) && $taskUser['ID']
+                                                == $userId) {
+                                            if (have_rows('task_list')):
+                                                while (have_rows('task_list')) : the_row();
+                                                    $taskObj = get_sub_field_object('task_status');
+                                                    // display a sub field value
+                                                    $task = get_sub_field('task');
+                                                    $status = get_sub_field('task_status');
+                                                    $taskList[] = array(
+                                                        'task' => $task,
+                                                        'status_key' => $taskObj['name'],
+                                                        'status' => $status
+                                                    );
+                                                endwhile;
+                                            else :
+                                            // no rows found
+                                            endif;
+                                        }
+                                    endwhile;
+                                }
+                                $data[] = array(
+                                    'task_list' => $taskList
+                                );
+                            endwhile;
+                            $featureArr = $data;
+                        }
+                        $userArr = array(
+                            'id' => $userdata->ID,
+                            'email' => $userdata->user_email,
+                            'name' => $userdata->display_name,
+                            'features' => $featureArr
+                        );
+                        getJson(array('status' => '1', 'data' => $userArr, 'message' => 'User logged in successfully.'));
                     } else {
                         getJson(array('status' => '0', 'message' => 'Invalid crew code.'));
                     }
