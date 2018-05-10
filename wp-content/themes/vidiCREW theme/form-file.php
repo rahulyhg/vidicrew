@@ -1,12 +1,14 @@
 <?php
 global $wpdb;
 $userArr = $wpdb->get_results("SELECT notification,type,status,DATE_FORMAT(created_date, %d-%m-%Y) as created_date FROM wp_notification where status='1'");
-$args = array('meta_query' => array(
+/*$args = array('meta_query' => array(
         array('key' => 'device_id', 'value' => '', 'compare' => '!='),
         array('key' => 'device_type', 'value' => '', 'compare' => '!='),
         ));
-$userArr = get_users($args);
-
+$userArr = get_users($args);*/
+$userArr = $wpdb->get_results("SELECT * FROM wp_users where device_id != '' and device_type != ''");
+//echo '<pre>';
+//print_r($userArr);
 ?>
 <style>
     /*.row{ display: table;
@@ -99,17 +101,17 @@ $userArr = get_users($args);
                             <?php
                             if (isset($userArr) && count($userArr) > 0) {
                                 foreach ($userArr as $data) {
-                                    $wpdb->insert(
-                                            'wp_notification',
-                                            array(
-                                        'user_id' => $data['id'],
-                                        'notification' => $msg,
-                                        'created_date' => date('Y-m-d H:i:s'),
-                                        'status' => '1',
-                                        'type' => $type
-                                            )
-                                    );
-                                    ?><option value="<?php echo $data['id']; ?>"><?php echo $data['display_name']; ?></option><?php
+//                                    $wpdb->insert(
+//                                            'wp_notification',
+//                                            array(
+//                                        'user_id' => $data->ID,
+//                                        'notification' => $msg,
+//                                        'created_date' => date('Y-m-d H:i:s'),
+//                                        'status' => '1',
+//                                        'type' => $type
+//                                            )
+//                                    );
+                                    ?><option value="<?php echo $data->ID; ?>"><?php echo $data->display_name; ?></option><?php
                                 }
                             }
                             ?>
